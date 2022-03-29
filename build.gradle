@@ -1,0 +1,35 @@
+plugins {
+  id "com.microsoft.azure.azurefunctions" version "1.8.2"
+}
+apply plugin: 'java'
+apply plugin: "com.microsoft.azure.azurefunctions"
+
+group 'com.function'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    implementation 'com.microsoft.azure.functions:azure-functions-java-library:1.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+azurefunctions {
+    resourceGroup = 'java-functions-group'
+    appName = 'sy-test-azure-cosmos-1648522160713'
+    pricingTier = 'Consumption'
+    region = 'westus'
+    runtime {
+      os = 'windows'
+      javaVersion = '8'
+    }
+    localDebug = "transport=dt_socket,server=y,suspend=n,address=5005"
+}
