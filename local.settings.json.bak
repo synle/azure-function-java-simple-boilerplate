@@ -1,0 +1,10 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "AzureCosmosDbConnection": "<your_cosmosdb_connection_string_here>",
+    "TargetCosmosDatabase": "ToDos",
+    "TargetCosmosCollection": "collection1",
+    "FUNCTIONS_WORKER_RUNTIME": "java"
+  }
+}

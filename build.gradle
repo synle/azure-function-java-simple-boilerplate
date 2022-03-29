@@ -23,7 +23,7 @@ repositories {
 }
 
 azurefunctions {
-    resourceGroup = 'java-functions-group'
+    resourceGroup = 'java-functions-sy-test-with-group'
     appName = 'sy-test-azure-cosmos-1648522160713'
     pricingTier = 'Consumption'
     region = 'westus'

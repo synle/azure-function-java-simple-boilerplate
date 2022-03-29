@@ -1,8 +1,10 @@
 package com.function;
 
-import java.util.*;
+
 import com.microsoft.azure.functions.annotation.*;
 import com.microsoft.azure.functions.*;
+import java.util.*;
+
 
 /**
  * Azure Functions with HTTP Trigger.
@@ -27,6 +29,23 @@ public class HttpTriggerJava1 {
             return request.createResponseBuilder(HttpStatus.BAD_REQUEST).body("Please pass a name on the query string or in the request body").build();
         } else {
             return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name).build();
+        }
+    }
+
+    // this is the cosmos db trigger examples
+    // this is triggered for both insert and update
+    @FunctionName("CosmosTriggerAndOutput")
+    public void CosmosTriggerAndOutput(
+        @CosmosDBTrigger(
+            name = "items",
+            databaseName = "%TargetCosmosDatabase%",
+            collectionName = "%TargetCosmosCollection%",
+            connectionStringSetting = "AzureCosmosDbConnection",
+            createLeaseCollectionIfNotExists = true) Object[] items,
+        final ExecutionContext context) {
+        context.getLogger().info(">> Total Items Received from CosmosDB: " + items.length);
+        for(Object item : items){
+            context.getLogger().info(">> Item Found: " + item);
         }
     }
 }
