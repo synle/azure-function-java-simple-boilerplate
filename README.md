@@ -1,5 +1,7 @@
 # Simple Azure Function Boilderplate
 
+I published an article on this. You can reference that article here at [Writing your first serverless solution with Java and Azure Functions](https://www.linkedin.com/pulse/writing-your-first-serverless-solution-java-azure-functions-sy-le).
+
 ## Prerequistes
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Cjava%2Cportal%2Cbash#v2)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
@@ -35,7 +37,7 @@ gradle azureFunctionsDeploy
 ```
 
 ## Local JSON
-Secrets for connection string can be stored in `local.settings.json`
+Secrets for connection string can be stored in `local.settings.json`. Refer to this backup of [local.settings.json.bak](https://github.com/synle/azure-function-java-simple-boilderplate/blob/main/local.settings.json.bak) file for more details
 
 
 ## Useful docs
