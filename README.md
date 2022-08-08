@@ -1,4 +1,4 @@
-# Simple Azure Function Boilderplate
+# Simple Azure Function Boilerplate
 
 I published an article on this. You can reference that article here at [Writing your first serverless solution with Java and Azure Functions](https://www.linkedin.com/pulse/writing-your-first-serverless-solution-java-azure-functions-sy-le).
 
