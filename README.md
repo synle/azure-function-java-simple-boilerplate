@@ -10,6 +10,13 @@ I published an article on this. You can reference that article here at [Writing 
 
 ## Run it locally
 
+### %JAVA_HOME%
+For Linux, you need to provide the JAVA_HOME property in your bashrc.
+
+```
+export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
+```
+
 ### Update `local.settings.json`
 
 Use the template `local.settings.json.bak` and create a template for your local testings.
@@ -22,7 +29,7 @@ Update that `local.settings.json` with your environment
 
 ### Run it locally
 ```
-gradle azureFunctionsRun
+./gradlew azureFunctionsRun
 ```
 
 ### To see it
@@ -33,7 +40,7 @@ http://localhost:7071/api/HttpTriggerJava1
 
 ## Deploy it
 ```
-gradle azureFunctionsDeploy
+./gradlew azureFunctionsDeploy
 ```
 
 ## Local JSON
