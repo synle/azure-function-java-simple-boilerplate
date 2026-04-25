@@ -67,3 +67,29 @@ __queuestorage__
 __azurite_db*__.json
 
 .vscode
+
+# Standard junk files
+*.swp
+*.swo
+*.pyc
+*.pyo
+*.o
+*.obj
+Thumbs.db
+desktop.ini
+.terraform
+.ipynb_checkpoints
+.history
+_build
+logs
+log
+tmp
+temp
+.serverless
+.expo
+.expo-shared
+.docusaurus
+.angular
+.svelte-kit
+Pods
+DerivedData
