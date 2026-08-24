@@ -2,7 +2,7 @@
 
 I published an article on this. You can reference that article here at [Writing your first serverless solution with Java and Azure Functions](https://www.linkedin.com/pulse/writing-your-first-serverless-solution-java-azure-functions-sy-le).
 
-## Prerequistes
+## Prerequisites
 - [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Cwindows%2Cjava%2Cportal%2Cbash#v2)
 - [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/)
 - [Azure Function for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
@@ -19,7 +19,7 @@ export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
 
 ### Update `local.settings.json`
 
-Use the template `local.settings.json.bak` and create a template for your local testings.
+Use the template `local.settings.json.bak` to create your local settings.
 
 ```
 cp local.settings.json.bak local.settings.json
