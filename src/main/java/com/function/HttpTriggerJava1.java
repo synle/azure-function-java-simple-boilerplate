@@ -21,7 +21,6 @@ public class HttpTriggerJava1 {
             final ExecutionContext context) {
         context.getLogger().info("Java HTTP trigger processed a request.");
 
-        // Parse query parameter
         String query = request.getQueryParameters().get("name");
         String name = request.getBody().orElse(query);
 
@@ -31,22 +30,4 @@ public class HttpTriggerJava1 {
             return request.createResponseBuilder(HttpStatus.OK).body("Hello, " + name).build();
         }
     }
-
-    // TODO: remove if needed.
-    // this is the cosmos db trigger examples
-    // this is triggered for both insert and update
-    // @FunctionName("CosmosTriggerAndOutput")
-    // public void CosmosTriggerAndOutput(
-    //     @CosmosDBTrigger(
-    //         name = "items",
-    //         databaseName = "%TargetCosmosDatabase%",
-    //         collectionName = "%TargetCosmosCollection%",
-    //         connectionStringSetting = "AzureCosmosDbConnection",
-    //         createLeaseCollectionIfNotExists = true) Object[] items,
-    //     final ExecutionContext context) {
-    //     context.getLogger().info(">> Total Items Received from CosmosDB: " + items.length);
-    //     for(Object item : items){
-    //         context.getLogger().info(">> Item Found: " + item);
-    //     }
-    // }
 }
